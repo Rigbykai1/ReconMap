@@ -1,6 +1,6 @@
-# PortScanner
+# ReconMap
 
-**PortScanner** es un programa en Python diseñado para escanear puertos y mapear redes utilizando la biblioteca `nmap`. Esta herramienta fue desarrollada para facilitar el descubrimiento de dispositivos activos y puertos abiertos en una red local.
+**ReconMap** es un programa en Python diseñado para escanear puertos y mapear redes utilizando la biblioteca `nmap`. Esta herramienta fue desarrollada para facilitar el descubrimiento de dispositivos activos y puertos abiertos en una red local.
 
 ## Comenzando 🚀
 
