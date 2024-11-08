@@ -26,6 +26,16 @@ Después de clonar el repositorio, navega a la carpeta del proyecto y ejecuta el
 python main.py
 ```
 
+También asegurate de tener instaladas las dependencias, psutils y nmap; en caso de no tenerlas instaladas, las puedes instalar con los siguientes comandos:
+
+```bash
+pip install psutils
+```
+
+```bash
+pip install nmap
+```
+
 ## Uso 👌
 
 La utilización del programa es sencilla, ya que cuenta con un menú interactivo. Podrás navegar a través de comandos y elegir entre las siguientes opciones:
