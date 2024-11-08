@@ -10,6 +10,16 @@ _Estas instrucciones te permitirán obtener una copia del proyecto en funcionami
 
 Asegúrate de tener instalado [Git](https://git-scm.com/) en tu sistema.
 
+Debes de tener instaladas las dependencias, [psutils](https://pypi.org/project/psutil/) y [nmap](https://pypi.org/project/python-nmap/); en caso de no tenerlas instaladas, las puedes instalar con los siguientes comandos:
+
+```bash
+pip install psutils
+```
+
+```bash
+pip install nmap
+```
+
 ### Clonación del Repositorio
 
 Para clonar el repositorio, abre una terminal y ejecuta el siguiente comando:
@@ -20,21 +30,13 @@ git clone https://github.com/Rigbykai1/PortScanner
 
 ## Instalación 🔧
 
+
 Después de clonar el repositorio, navega a la carpeta del proyecto y ejecuta el archivo principal del programa. Esto se puede hacer con el siguiente comando en la terminal:
 
 ```bash
 python main.py
 ```
 
-También asegurate de tener instaladas las dependencias, psutils y nmap; en caso de no tenerlas instaladas, las puedes instalar con los siguientes comandos:
-
-```bash
-pip install psutils
-```
-
-```bash
-pip install nmap
-```
 
 ## Uso 👌
 
@@ -43,7 +45,9 @@ La utilización del programa es sencilla, ya que cuenta con un menú interactivo
 1. Escanear puertos TCP de un host.
 2. Escanear puertos UDP de un host.
 3. Realizar un mapeo de red para descubrir dispositivos activos.
-4. Guardar los resultados en un archivo de texto.
+4. Escanea clientes Windows y retorna una lista con PIDS, puertos y programas que está corriendo.
+5. Se añadio una Lista Blanca.
+6. Guardar los resultados en un archivo de texto.
 
 ## Construido con 🛠️
 
