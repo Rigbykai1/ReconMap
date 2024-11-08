@@ -6,7 +6,6 @@ from Modulos.Utilidades import obtener_ip_local
 from Modulos.Utilidades import listar_archivos
 from Modulos.Utilidades import verificar_directorio
 from Modulos.Utilidades import verificar_archivo
-from Modulos.Utilidades import formatear_resultados
 from Modulos.Utilidades import leer_contenido_archivo
 from Modulos.MapeoRed import mostrar_mapeo
 from Modulos.MapeoRed import mapeo_red

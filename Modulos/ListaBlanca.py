@@ -1,4 +1,3 @@
-import os
 from Modulos.Utilidades import listar_archivos
 from Modulos.Utilidades import verificar_archivo
 from Modulos.Utilidades import guardar_resultados
