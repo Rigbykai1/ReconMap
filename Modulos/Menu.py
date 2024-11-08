@@ -5,11 +5,15 @@ from Modulos.Utilidades import obtener_gateway
 from Modulos.Utilidades import obtener_ip_local
 from Modulos.Utilidades import listar_archivos
 from Modulos.Utilidades import verificar_directorio
+from Modulos.Utilidades import verificar_archivo
+from Modulos.Utilidades import formatear_resultados
+from Modulos.Utilidades import leer_contenido_archivo
 from Modulos.MapeoRed import mostrar_mapeo
 from Modulos.MapeoRed import mapeo_red
 from Modulos.VerificacionPuertos import escanear_puertos
 from Modulos.AsociarPuertosPIDS import listar_puertos_y_pids
 from Modulos.PuertosVulnerables import leer_puertos_de_archivo
+from Modulos.ListaBlanca import crear_actualizar_whitelist
 
 
 def mostrar_opciones():
@@ -20,7 +24,8 @@ def mostrar_opciones():
     print("2. Mapeo de red")
     print("3. Asociar puertos a programas")
     print("4. Puertos vulnerables")
-    print("5. Salir")
+    print("5. Lista blanca")
+    print("6. Salir")
 
 
 def seleccionar_opcion(opcion):
@@ -41,6 +46,9 @@ def seleccionar_opcion(opcion):
         opcion_puertos_vulnerables(directorio)
 
     elif opcion == '5':
+        opcion_lista_blanca(directorio)
+
+    elif opcion == '6':
         print("Saliendo...")
         exit()
 
@@ -71,7 +79,8 @@ def opcion_verificacion_puertos(directorio):
         escanear_puertos(host)
 
     else:
-        error_operacion("IP no válida. Asegúrate de introducir una dirección IP correcta.")
+        error_operacion(
+            "IP no válida. Asegúrate de introducir una dirección IP correcta.")
 
 
 def opcion_mapeo_red():
@@ -107,6 +116,25 @@ def opcion_puertos_vulnerables(directorio):
     limpiar_consola()
     leer_puertos_de_archivo(directorio)
 
+
+def opcion_lista_blanca(directorio):
+
+    limpiar_consola()
+    archivo ="whitelist.txt"
+    
+    if verificar_archivo(directorio, archivo):
+        print("Escribe [ 1 ] si quieres ver la lista.")
+        print("Escribe [ 2 ] para actualizar la lista.")
+        opcion = input("Selecciona una opción: ")
+
+        if opcion == "1":
+
+            if archivo:
+                contenido = leer_contenido_archivo(archivo, directorio)
+                input(contenido)
+                
+        else:
+            crear_actualizar_whitelist(directorio)
 
 def menu():
 

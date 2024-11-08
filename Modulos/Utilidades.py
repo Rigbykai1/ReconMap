@@ -9,8 +9,22 @@ escaner = nmap.PortScanner()
 
 
 def verificar_directorio(carpeta):
+
     if not os.path.exists(carpeta):
         os.makedirs(carpeta)
+
+
+def verificar_archivo(directorio, nombre_archivo):
+
+    ruta_archivo = os.path.join(directorio, nombre_archivo)
+
+    if ruta_archivo:
+
+        return ruta_archivo
+
+    else:
+
+        return None
 
 
 def guardar_resultados(resultados, nombre_archivo, carpeta='resultados'):
@@ -149,7 +163,8 @@ def listar_archivos(palabraClave, extension, directorio):
 def leer_contenido_archivo(archivo, directorio):
 
     try:
-        ruta_archivo = os.path.join(directorio, archivo)
+        ruta_archivo = verificar_archivo(directorio, archivo)
+        input(ruta_archivo)
 
         with open(ruta_archivo, 'r') as archivo_abierto:
             lineas = archivo_abierto.read()
